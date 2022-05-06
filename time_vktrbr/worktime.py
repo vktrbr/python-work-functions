@@ -62,7 +62,6 @@ def worktime(start: pd.Timestamp, end: pd.Timestamp, schedule: List[ScheduleDay]
                 total_time += day.end - day.start
             schedule.remove(day)
 
-
     if schedule[0].is_work:
         total_time += schedule[0].end - start  # Прибавляем рабочее время в первый РАБОЧИЙ день
     if schedule[1].is_work:
